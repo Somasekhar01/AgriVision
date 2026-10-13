@@ -9,7 +9,7 @@ import { createJsonChatCompletion, createTextResponse } from "./openai.js";
 
 const app = express();
 const PORT = Number(process.env.PORT || 4000);
-const defaultAllowedOrigins = "http://localhost:8080,http://localhost:8081,http://127.0.0.1:8080,http://127.0.0.1:8081";
+const defaultAllowedOrigins = "http://localhost:5173,http://127.0.0.1:5173,http://localhost:8080,http://localhost:8081,http://127.0.0.1:8080,http://127.0.0.1:8081";
 const allowedOrigins = `${process.env.FRONTEND_URL || ""},${defaultAllowedOrigins}`
   .split(",")
   .map((origin) => origin.trim())
